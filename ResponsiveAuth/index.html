@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="left">
+          <img src="logo.svg" class="logo" />
+          <h1>Welcome Back</h1>          
+        </div>
+
+        <div class="right">
+          <div class="buttons">
+            <button id="loginBtn" class="active">Login</button>
+            <button id="registerBtn">Register</button>
+          </div>
+
+          <form id="loginForm">
+            <h2>Login</h2>
+
+            <input type="email" placeholder="Email Address" />
+
+            <div class="password-box">
+              <input type="password" id="loginPassword" placeholder="Password" />
+              <span onclick="togglePassword('loginPassword', this)">&#x1F441;</span>
+            </div>
+
+            <button class="submit">Login</button>
+          </form>
+
+          <form id="registerForm">
+            <h2>Create Account</h2>
+
+            <input type="text" placeholder="Full Name" />
+
+            <input type="email" placeholder="Email" />
+
+            <div class="password-box">
+              <input type="password" id="registerPassword" placeholder="Password" />
+
+              <span onclick="togglePassword('registerPassword', this)">&#x1F441;</span>
+            </div>
+
+            <div class="password-box">
+              <input type="password" id="confirmPassword" placeholder="Confirm Password" />
+
+              <span onclick="togglePassword('confirmPassword', this)">&#x1F441;</span>
+            </div>
+
+            <button class="submit">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
